@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/normalize .css">
+    <link rel="stylesheet" href="../css/main-walk.dog.css">
+    <title>walk the dog</title>
+</head>
+<body>
+    <div class="main-bgc">
+        <div class="main-happy">
+            <div class="main-nav">
+                <a href="../html/main.html"><div class="logo"><img src="../img/ok1-w-8.png" alt=""></div></a>
+                <nav class="nav-3">
+                    <ul>
+                        <a href=""><li><i class="fas fa-user-circle fa-2x"></i></li></a>
+                        <a href=""><li><i class="far fa-question-circle fa-2x"></i></li></a>
+                        <a href=""><li><i class="fas fa-shopping-cart fa-2x"></i></li></a>
+                        <p>__________</p>
+                    </ul>
+                </nav>
+                <nav class="nav-4">
+                    <ul>
+                        <a href=""><li>品牌故事</li></a>
+                    
+                        <a href=""><li class="walk-color">遛狗服務</li></a>
+                       
+                        
+                        <a href=""><li>寵物用品</li></a>
+
+                        <a href="../html/pet-article.html"><li>寵物專欄</li></a>
+                    </ul>
+      
+                </nav>
+            </div>
+
+            <div class="little-dog-group">
+                <div><img src="../img/little-bg.jpg" alt=""></div>
+                <div class="little-2"><img src="../img/little-bg.jpg" alt=""></div>
+            </div>
+
+            <div class="main-choose">
+                <div class="choose-block"></div>
+                <div>想要選擇哪一天呢？</div>
+                <div class="cr-1">
+                    
+                    <div class="cal-group-1">
+                        
+                    <input class="cal cal-1" type="text" name="start_date" placeholder="&emsp;起始日">
+                    <i class="fas fa-calendar-alt fa-2x"></i>
+                    </div>
+
+                    <i class="fas fa-arrow-right fa-2x"></i>
+
+                    <div class="cal-group-2">
+                    <input class="cal cal-2" type="text" name="end_date" placeholder="&emsp;結束日">
+                    <i class="fas fa-calendar-alt fa-2x"></i>
+                    </div>
+                    
+                </div>
+                <div class="notice-2-w">
+                <p>我的寵物散步路線在...</p><p>寵物散步的次數也可以選擇唷！</p></div>
+                <div class="cr-2">
+                    <div class="location-input"><input type="text" placeholder="&emsp;Taipei,Taiwan"><i class="fas fa-map-marker-alt fa-2x"></i></div>
+                    <div class="one-t-btn">One Time</div>
+                    <div class="repeat-btn"><i class="fas fa-redo-alt fa-2x"></i>&emsp;Weekly Repeat</div>
+                </div>
+
+                <div>那我們再來選擇寵物的大小吧！</div>
+                <div class="cr-3">
+                    <div class="btn-3">Small</div>
+                    <div class="btn-3">Medium</div>
+                    <div class="btn-3">Big</div>
+                    <div class="btn-3">Huge</div>
+
+                    <div class="cr-3-search"><a href="../html/little-walk-dog.html#jump"> Search</a></div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="area-2-word">
+        <h1>Lighthouse</h1>
+        <p>誠摯的歡迎您加入</p>
+    </div>
+
+    <div class="walk-area-1">
+        <div class="feedback">
+            <div class="f-w-1"><p>非常感謝 <span>&ensp;Lighthouse&ensp;</span> 平台上 <br> 所有盡職有愛的遛狗者們！<br> 讓我更能彈性分配 <br> 生活與工作的時間  <br>  重點是我的愛犬Youyou <br> 可以更常去散步了！</p></div>
+            <div class="thx-1"></div>
+        </div>
+        <div class="feedback-2">
+            <div class="f-w-2"><p>非常棒的平台！能和許多狗 <br> 狗成為朋友是件非常幸福的事<br>十分推薦喜愛動物的你！<br>  還在猶豫什麼？ <br> 現在就加入<span>&ensp;Lighthouse&ensp;</span>！</p></div>
+            <div class="thx-2"></div>
+            <div class="register-btn">立即註冊帳號</div>
+        </div>
+
+        
+    
+    </div>
+
+    <div  class="walk-area-2" >
+
+        <div class="cup-block">
+            <div class="cup-block-1"></div>
+            <div class="cup-block-2"></div>
+        </div>
+        <div class="cup-block-word">
+            <p>現在註冊 </p>
+            <p> Lighthouse會員</p>
+            <p>優惠活動至109年12月31日止</p>
+        </div>
+
+    </div>
+    
+    <div class="top" id="go_top">TOP<i class="fas fa-angle-double-up"></i></div>
+
+    <footer class="lighthouse-footer">Copyright © Lighthouse All Rights Reserved.</footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script> // DOM 載入完成後執行
+        $(function(){
+          
+          // 點擊按鈕，頁面滑到最上方
+          $("#go_top").on("click", function(e){
+            e.preventDefault();
+            $('html, body').animate({
+              scrollTop: 0
+            }, 750);
+          });
+          
+        });   </script>
+</body>
+</html>

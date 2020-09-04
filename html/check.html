@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../vendors/index.js">
+    <link rel="stylesheet" href="../vendors/strict.js">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        
+        .content{
+        border: #264250 1px solid;
+        width: 500px;
+        height: 500px;
+        background-color: #fff;
+        position: fixed;
+        right: 0;
+
+        transform: translateX(100%);
+        transition: 1s ease-in-out;
+        }
+
+        .-open{
+        transform: translateX(0%);
+
+        }
+    </style>
+</head>
+<body>
+    <button><i class="fas fa-shopping-cart fa-2x"></i></button>
+    <div class="content">9m8888888888888888888888888888888888888888888888888888888888888888888888888888888</div>
+
+    <script>
+         $(function(){
+
+        // 點擊
+        $("button.fa-shopping-cart").on("click", function(){
+        // -open 的樣式切換
+        $(this).closest("div.content").toggleClass("-open");
+        });
+
+        });
+    </script>
+</body>
+</html>
