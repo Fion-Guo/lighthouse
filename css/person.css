@@ -23,17 +23,20 @@ body{
     border: steelblue 1px solid;
     width: 100%;
     height: 800px;
+    position: relative;
+    
+}
+
+.orange-block{
+    width: 100%;
+    height: 400px;
+    background-color: #F5E4CF;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
 }
 
 
-.first-block div{
-    background-color: #f0e6a2;
-    width: 180px;
-    height: 50px;
-}
-.first-block i{
-    color: #264250;  
-}
     
     
     
@@ -99,11 +102,373 @@ width: 900px;
 padding: 0;
 text-align: center;   
 }
-.main-happy{
-width: 100%;
-height: 300px;
-background-color: #F5e4cf;
-        
+      
+
+/* ----開始！---- */
+
+.contact-btn{
+    background-color: #f0e6a2;
+    width: 250px;
+    height: 70px;
+}
+.first-block i{
+    color: #264250;  
+    transform: translateY(25%) translateX(25%);
+}
+.first-block {
+    /* border: rgb(218, 91, 17) 1px solid; */
+    display: flex;
+    justify-content: space-around;
+    width: 700px;
+    height: 200px;
+    /* position: relative; */
+
+    align-items: center;
+
+    
+}
+.first-block p{
+    font-size: 30px;
 }
 
 
+.contact-btn p{
+    font-size: 30px;
+    position: absolute;
+    top: 55px;
+    left: 120px;
+    
+}
+
+.star-group{
+    color: #FFD740;
+    /* border: 1px solid darkcyan; */
+    position: absolute;
+    left: 666px;
+    bottom: -185px;
+
+}
+.first-block{
+    position: absolute;
+    left: 600px;
+}
+
+.banner{
+    /* border: darkcyan 1px solid; */
+    position: relative;
+}
+.person-pic{
+    background-image: url(../img/de574f51aeb164de32e831d258b304a5.jpg);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-size: contain;
+    background-position: center;
+
+    position: absolute;
+    left: 165px;
+
+}
+.person-pic p{
+    font-size: 50px;
+}
+
+.money-card{
+    background-color: #E5E5E5;
+    width: 350px;
+    height: 250px;
+    
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    left: 500px;
+    top: 280px;    
+}
+.money-card > i {
+    color: #5F5300;
+    /* border: 1px solid darkcyan; */
+    vertical-align: top;
+    transform: translateX(50%);
+    margin-left: 20px;
+    margin-right: 20px;
+
+
+
+}
+.money-card-content{
+    font-size: 40px;
+    /* border: 1px solid darkcyan; */
+    width: 250px;
+    display: inline-block;
+    text-align: center;
+   
+}
+.border-gray{
+    
+    border: 4px solid #DBD5D5;
+    width: 120px;
+    transform: translateX(50%);  
+}
+/* ---個人狗狗相簿--- */
+
+
+.big-one{
+    background-image: url(../img/photo-1494947665470-20322015e3a8.jpeg);
+    width: 400px;
+    height: 300px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;   
+}
+
+
+.aldum-pic-1{
+    background-image: url(../img/a6.jpeg);
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.aldum-pic-2{
+    background-image: url(../img/photo-1587300003388-59208cc962cb.jpeg);
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.aldum-pic-3{
+    background-image: url(../img/photo-1578133559556-9e83af5fc5f3.jpeg);
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.aldum-pic-4{
+    background-image: url(../img/photo-1507145569372-d69bae8bc9a0.jpeg);
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+} 
+
+/* ----月曆---- */
+.big-calender{
+    width: 400px;
+    height: 380px;
+    margin: 40px;
+}
+.arrow{
+    padding: 3px 8px;
+    border: 1.6px solid #707070;
+    border-radius: 50%;
+    font-size: 0.43em;
+    vertical-align: middle;
+}
+
+.prev{
+     margin-right: 40px;
+}
+   
+.next{
+    margin-left: 40px
+}
+
+td{
+    padding: 1em 1em;
+    cursor: default;
+}
+    
+   
+.week{
+    
+    color: #363531;
+    text-transform: uppercase;
+}
+th {
+    padding-bottom: 5px;
+}
+    
+  
+.grey{
+    color: #707070;
+}
+
+.today{
+    color: white;
+    border-radius: 100%;
+    background-color: salmon;
+}    
+    c
+
+.reminder::before{
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background-color: salmon;
+    border-radius: 50%;
+    margin-top: 24px;
+    margin-left: 5px;
+}
+    
+.reminder:hover{
+    background-color: salmon;
+    color: white;
+    transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    -webkit-transition: background 0.3s;
+}
+   
+.desciption{
+     background-color: salmon;
+    position: absolute;
+}
+   
+  
+a:link{
+    color: darkolivegreen;
+    text-decoration: none;
+} 
+    
+
+a:visited{
+     color: darkolivegreen;
+    text-decoration: none;
+}
+   
+
+a:hover{
+    color: darkorange;
+    border-color: darkorange;
+    text-decoration: none;
+} 
+    
+
+a:active {
+    color: darkolivegreen;
+    text-decoration: none;
+}
+
+/* ----日曆結束---- */
+ 
+
+    
+    
+
+
+
+
+
+
+/*---- 評論 ---- */
+.bio-2area{
+    /* border: rgb(141, 39, 102) 1px solid; */
+    width: 1200px;
+    margin: 0 auto;
+
+    position: relative;
+}
+.comment-group{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.comment{
+    /* border: steelblue 1px solid; */
+    width: 600px;
+    height: 280px;
+    margin: 15px;
+}
+.comment-1,.comment-3{
+    background-color: #f5ecec;
+}
+.comment-2,.comment-4{
+    background-color: #f2ede1;
+}
+.bio-content{
+    border: darkorange 1px solid;
+   
+    
+}
+.bio-content p{
+    width: 500px;
+    text-align: center;
+}
+
+.c-pic-1{
+    background-image: url(../img/person-1.jpg);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+.c-pic-2{
+    background-image: url(../img/person-2.jpg);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+
+.c-pic-3{
+    background-image: url(../img/person-4.jpeg);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+
+.c-pic-4{
+    background-image: url(../img/person-3.jpg);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+
+/* ---上の按鈕 ＋ footer--- */
+.top{
+    cursor: pointer;
+    background-color: #EBF6FD;
+    color: #707070;
+    height: 100px;
+    width: 100px;
+    font-size: 30px;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    
+}
+
+.lighthouse-footer{
+    text-align: center;
+    
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+    background-color: #264250;
+    color: #fff;
+
+}
