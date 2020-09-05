@@ -60,7 +60,7 @@
                 <ul>
                     <li><i class="fas fa-user-circle fa-2x"></i></li>
                     <li><i class="far fa-question-circle fa-2x"></i></li>
-                    <li> <a href=""><i class="fas fa-shopping-cart fa-2x"></i></a></li>
+                    <li><i class="fas fa-shopping-cart fa-2x"></i></li>
                 </ul>
             </nav>
             <nav class="nav-4">
@@ -230,7 +230,7 @@
 
     // 點擊
     $(".fa-shopping-cart").on("click", function(e){
-        e.preventDefault();
+        // e.preventDefault();
     // -open 的樣式切換
     $("div.right-side-bar").toggleClass("-open");
     });
@@ -239,9 +239,9 @@
 
     $(function(){
     $(".fa-times-circle").on("click", function(e){
-        e.preventDefault();
+        // e.preventDefault();
     // -open 的樣式切換
-    $("div.right-side-bar").toggleClass("-close");
+    $("div.right-side-bar").toggleClass("-open");
     });
 
     });
