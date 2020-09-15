@@ -1,0 +1,7 @@
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .main-nav > ul > li{
+   
+        /* border: rgb(51, 150, 145) 1px solid; */
+        font-size: 25px;
+    }
+  }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/help.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tab_container">
+  
+        <div class="tab_list_block">
+          <ul class="tab_list">
+            <li><a href="#" data-target="tab1" class="tab -on">退貨退款須知
+            </a></li>
+            <li><a href="#" data-target="tab2" class="tab">常見Q&A</a></li>
+            
+          </ul>
+        </div>
+        
+        <div class="tab_contents">
+          
+          <div class="tab tab1 -on">
+            1.  收到商品超過7天，恕不接受退貨 ( 包含瑕疵品 )。<br>
+
+2.  商品需保持完整包裝 (含商品本體、配件、贈品、說明書、原廠包裝及所有隨附文件或資料的完整），切勿缺漏任何配件、或毀壞原廠外盒。若有遺失、毀損、缺件或已使用過，會影響您退或權益，或不予以退貨。<br>
+
+3.  商品外盒有明顯人為損壞，恕無法辦理退貨，敬請見諒。<br>
+
+4.  請填妥退貨申請表 之姓名、Email、手機號碼、訂單編號及退貨原因等，若使用信用卡以外的方式付款，則需填寫匯款帳號。收到您的退貨申請後，我們立即與您確認退貨相關事宜。<br>
+
+5.  瑕疵商品退貨 : 請於7日內辦理換貨，運費由我們負擔，逾期不受理。<br>
+
+      * 商品材質特性與製程所產生的細痕、雜質、黑點、白點、陰影、紋路、分模線、氣泡、凹痕、表面不均勻、不平整等狀況皆非屬瑕疵範圍。<br>
+      * 商品如經使用或因人為造成的損壞皆非屬瑕疵範圍，亦無法退貨或換貨。<br>
+
+6.  非瑕疵商品退貨 : 請於7日內辦理退換貨，將由顧客自行負擔運費，逾期不受理。如商品已經使用將無法退換貨。
+          </div>
+          
+          <div class="tab tab2">
+            關於帳號常見問題：
+Q1.需要註冊帳號才能購物嗎？[+] <br>
+Q2.如何成為Lighthouse網路商店的會員？[+] <br>
+Q3.如何變更您的密碼？[+] <br>
+Q4.忘記密碼？[+] <br>
+購物常見問題：<br>
+Q1.購買金額達多少以上可免運費？[+]<br>
+Q2.放入購物車商品是否表示有優先購買權？[+]<br>
+Q3.如何查詢目前訂單處理情況？[+]<br>
+Q4.如何修改配送地址？[+]<br>
+Q5. 收到訂單確認信件，表示商品訂購成功？<br>
+配送常見問題：<br>
+Q1.如何計算運費？[+]<br>
+Q2.訂購商品後需要幾天的時間才可以收到商品呢？[+]<br>
+Q3.關於國際配送關稅[+]
+          </div>
+          
+        </div>
+        
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+      $(function(){
+        $("a.tab").on("click", function(e){
+          e.preventDefault();
+          
+          /* 將頁籤列表移除所有 -on，再將指定的加上 -on */
+          $(this).closest("ul").find("a.tab").removeClass("-on");
+          $(this).addClass("-on");
+          
+          /* 找到對應的頁籤內容，加上 -on 來顯示 */
+          $("div.tab").removeClass("-on");
+          $("div.tab." + $(this).attr("data-target")).addClass("-on");
+        });
+      });
+      </script>
+</body>
+</html>

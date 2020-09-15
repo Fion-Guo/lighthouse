@@ -53,13 +53,48 @@
         
 
     </div>
+    <!-- 購物車抽屜 end -->
+
+    <!-- 登入 / 註冊燈箱 -->
+    <div class="overlay">
+        
+        <div class="log-in-modal">
+            <i class="far fa-window-close btn_modal_close fa-3x"></i>
+           
+          <div class="log-dog-pic">
+            <div class="main-log-part">
+              <div class="log-logo"><a href="../html/main.html"><img src="../img/ok2-y-8.png" alt=""></a></div>
+              <input type="text" placeholder="&emsp;&emsp;Lighthouse 帳號">
+              <input type="text" placeholder="&emsp;&emsp;密碼">
+              <div class="log-btn">登入</div>
+              <div class="forget-ps">
+                <p>忘記密碼了嗎？</p>
+      
+              </div>
+      
+              <div class="new-account">
+                <p>還不是會員嗎?</p>
+                <p class="quick">立刻註冊新帳號</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+
+
+    <!-- 登入 / 註冊燈箱 end-->
+
+
+
     <div class="main-bgc">
         <div class="main-nav">
             <a href="../html/main.html"><div class="logo"><img src="../img/ok1-w-8.png" alt=""></div></a>
             <nav class="nav-3">
                 <ul>
-                    <li><i class="fas fa-user-circle fa-2x"></i></li>
-                    <li><i class="far fa-question-circle fa-2x"></i></li>
+                    <li><i class="fas fa-user-circle fa-2x btn_modal"></i></li>
+                    <li><i class="far fa-question-circle fa-2x "></i></li>
                     <li><i class="fas fa-shopping-cart fa-2x"></i></li>
                 </ul>
             </nav>
@@ -245,6 +280,25 @@
     });
 
     });
+
+    $(function () {
+  // 開啟 Modal 彈跳視窗
+  $(".btn_modal").on("click", function (e) {
+    $("div.overlay").addClass("-on");
+  });
+
+  // 關閉 Modal
+  $(".btn_modal_close").on("click", function (e) {
+    $("div.overlay").addClass("-opacity-zero");
+
+    // 設定隔一秒後，移除相關 class
+    setTimeout(function (e) {
+      $("div.overlay").removeClass("-on -opacity-zero");
+    }, 1000);
+  });
+});
+
+
     
     
     

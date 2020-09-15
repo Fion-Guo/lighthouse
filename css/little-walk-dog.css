@@ -7,6 +7,7 @@
 
 body{
     font-family: "oriya", "taipei-fonts";
+    
 }
 
 @font-face{
@@ -23,6 +24,7 @@ body{
 .main-bgc{
 
 width: 100%;
+
 height: 1105px;
 }
 
@@ -43,32 +45,38 @@ height: 1105px;
     margin-bottom: 20px;
    padding-top: 20px;
 }
+.main-nav{
+    z-index: 3;
+    position: relative;
+}
 
 .nav-3 li,.nav-4 li{
 list-style: none;
 display: inline-block;
+cursor: pointer;
 
 }
-.main-nav{
 
-position: relative;
+
+.nav-3 li{
+    padding: 20px;
+    
 }
+
 
 .nav-3{
 display: inline-block;
 
-width: 200px;
+width: 400px;
 height: 100px;
+margin: 30px;
 color: #264250;
 position: absolute;
 top: 0;
 right: 0;
 }
 
-.nav-3 a{
-    color: #264250;
-    padding: 5px;
-}
+
 
 .nav-4{
     display: flex;
@@ -76,21 +84,163 @@ right: 0;
     
 }
 
-.nav-4 li{
-/* padding-left: 100px; */
-margin: 0 70px;
-color: #264250;
-font-size: 20px;
-
-}
 
 .nav-4 ul{
-/* border: 1px solid #19753c; */
-width: 900px;
-/* margin: 0 auto;  */
-padding: 0;
-text-align: center;   
+    
+    width: 60%;
+    
+    padding: 0;
+    text-align: center;   
+    }
+
+.nav-4 li{
+
+margin: 0 70px;
+color: #264250;
+font-size: 25px;
+
+
+
 }
+
+.nav-4  li:hover::after{
+    /*hover要先寫*/
+    width: 100%;/*讓線段長出*/
+    
+}
+.nav-4  li::after{
+    content: "";/*讓after顯示出來*/
+    border-bottom: 40px solid #c0ba71;
+    
+    margin: auto;/*使線段從中間展開*/
+    position: relative/*調整位置*/;
+    width: 0%;
+    display: block;/*變成一個區塊才hover的到*/
+    transition: all .3s;
+    top: -25px;
+    z-index: -1;
+}
+.fa-question-circle{
+    color: #264250;
+}
+.main-walk-2 li{
+    color: #fff;
+}
+
+
+
+
+
+/* 登入 / 註冊燈箱 */
+
+.fa-window-close{
+    position: absolute;
+    padding: 10px;
+    cursor: pointer;
+}
+.log-in-modal {
+    width: 1100px;
+    height: 600px;
+    /* border: 1px solid #333; */
+    /* margin: 0 auto; */
+  
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    position: relative;
+    /* top: 50%; */
+    /* left: 50%; */
+  transform: translate(39%, 35%);
+  }
+  .log-dog-pic {
+    width: 600px;
+    height: 600px;
+    border-radius: 20px 0 0 20px;
+
+    background-image: url(../img/log-in.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .main-log-part {
+    line-height: 2;
+    width: 750px;
+    /* border: #333 1px solid; */
+    position: absolute;
+    right: 0;
+    text-align: center;
+    padding: 15px;
+  }
+  .main-log-part input {
+    margin: 0 auto;
+    margin-top: 30px;
+    border: none;
+    display: block;
+    border-radius: 50px;
+    width: 350px;
+    height: 60px;
+  }
+  
+  .log-btn {
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 30px;
+    background-color: #135a88;
+    color: #fff;
+    width: 200px;
+    padding: 0;
+    border-radius: 10px;
+  }
+  .forget-ps {
+    margin-top: 30px;
+    color: #135a88;
+    cursor: pointer;
+  }
+  .forget-ps p,
+  .new-account p {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .quick {
+    cursor: pointer;
+    color: #135a88;
+  }
+  
+  /* teacher wrote */
+  
+  div.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000vh;
+    background-color: hsla(0, 0%, 0%, 0.5);
+  
+    /* 預設：完全透明；設定 z-index: -1 會在整個頁面的後方，看不到，才不會擋到頁面元素。 */
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 1s;
+  }
+  div.overlay.-on {
+    /* 加上 -on 之後，Modal 漸漸出現，因為有設定 transition */
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  div.overlay.-opacity-zero {
+    /* 關閉 Modal 時，先讓 opacity設定0，就會慢慢變成完全透明，但這時會擋到後面的元素，所以要再移除 -on 及 -opacity-zero 這兩個 class */
+    opacity: 0;
+  }
+
+  
+
+/* 登入 / 註冊燈箱 end */
+
+
+
+
+
+
 .main-happy{
     width: 100%;
     height: 1105px;
@@ -196,9 +346,7 @@ text-align: center;
 .notice-2-w p{
     border: 1px transparent sienna;display: inline-block;
     width: 40%;
-    text-align: center;
-   
-    
+    text-align: center;    
 }
 
 .one-t-btn{
@@ -304,11 +452,26 @@ text-align: center;
     width: 1000px;
     height: 300px;
     margin: 0 auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
     margin-bottom: 100px;
     position: relative;
+
     
+    
+}
+
+.pc-h1, .pc-h2, .pc-h3, .pc-h4{
+    background-color: #F2EDE1;
+    /* border: steelblue 1px solid; */
+    -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+	transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+}
+
+.pc-h1:hover, .pc-h2:hover, .pc-h3:hover, .pc-h4:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translate(0,-5px);
+    transition-delay: 0s !important;
+    
+
 }
 
 
@@ -345,7 +508,7 @@ text-align: center;
 }
 
 .person-img{
-    /* border: 1px solid #333; */
+   
     background-image: url(../img/yo1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -353,5 +516,52 @@ text-align: center;
     width: 250px;
     height: 300px;
 }
+
+.pic-2{
+    background-image: url(../img/de574f51aeb164de32e831d258b304a5.jpg);
+}
+
+.pic-3{
+    background-image: url(../img/38ad292fa266ff2e785a43c6525ee044.jpg);
+}
+
+.pic-4{
+    background-image: url(../img/6444355f7f59429e2e560aae66ad832c.jpg);
+}
+
+
+
+.top{
+    cursor: pointer;
+    background-color: #EBF6FD;
+    color: #707070;
+    height: 100px;
+    width: 100px;
+    font-size: 30px;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    
+}
+
+.lighthouse-footer{
+    text-align: center;
+    margin-top: 200px;
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+    background-color: #264250;
+    color: #fff;
+
+}
+
+
 
 

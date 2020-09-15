@@ -19,8 +19,14 @@ body{
     src: url(../fonts/Oriya\ MN.ttc);
     font-display: swap;
 }
+
+@font-face{
+    font-family: "tiny-jf";
+    src: url(../fonts/jf-openhuninn-1.1.ttf);
+    font-display: swap;
+}
 .main-bgc{
-    border: steelblue 1px solid;
+    /* border: steelblue 1px solid; */
     width: 100%;
     height: 800px;
     position: relative;
@@ -54,31 +60,37 @@ body{
     transform: translateX(-50%);
     margin-bottom: 20px;
     padding-top: 20px;
-}
+
     
+    
+}
+ 
 .nav-3 li,.nav-4 li{
 list-style: none;
-display: inline-block;   
+display: inline-block;  
+cursor: pointer;
+
 }
 .main-nav{
-    
+z-index: 3;    
 position: relative;
 }
     
 .nav-3{
 display: inline-block;
     
-width: 200px;
+width: 400px;
 height: 100px;
+margin: 30px;
 color: #264250;
 position: absolute;
 top: 0;
 right: 0;
 }
+ 
+.nav-3 li{
+    padding: 20px;
     
-.nav-3 a{
-    color: #264250;
-    padding: 5px;
 }
     
 .nav-4{
@@ -91,35 +103,207 @@ right: 0;
 /* padding-left: 100px; */
 margin: 0 70px;
 color: #264250;
-font-size: 20px;
+font-size: 25px;
     
 }
     
 .nav-4 ul{
 /* border: 1px solid #19753c; */
-width: 900px;
+width: 60%;
     
 padding: 0;
 text-align: center;   
 }
+
+.nav-4  li:hover::after{
+    /*hover要先寫*/
+    width: 100%;/*讓線段長出*/
+    
+}
+.nav-4  li::after{
+    content: "";/*讓after顯示出來*/
+    border-bottom: 40px solid #c0ba71;
+    
+    margin: auto;/*使線段從中間展開*/
+    position: relative/*調整位置*/;
+    width: 0%;
+    display: block;/*變成一個區塊才hover的到*/
+    transition: all .3s;
+    top: -25px;
+    z-index: -1;
+}
+.main-walk-2 li{
+    color: #E9D098;
+} 
+.fa-question-circle{
+    color: #264250;
+}
+
+
+/* 登入 / 註冊燈箱 */
+
+.fa-window-close{
+    position: absolute;
+    padding: 10px;
+    cursor: pointer;
+}
+.log-in-modal {
+    width: 1100px;
+    height: 600px;
+    /* border: 1px solid #333; */
+    /* margin: 0 auto; */
+  
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    position: relative;
+    /* top: 50%; */
+    /* left: 50%; */
+  transform: translate(39%, 35%);
+  }
+  .log-dog-pic {
+    width: 600px;
+    height: 600px;
+    border-radius: 20px 0 0 20px;
+
+    background-image: url(../img/log-in.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .main-log-part {
+    line-height: 2;
+    width: 750px;
+    /* border: #333 1px solid; */
+    position: absolute;
+    right: 0;
+    text-align: center;
+    padding: 15px;
+  }
+  .main-log-part input {
+    margin: 0 auto;
+    margin-top: 30px;
+    border: none;
+    display: block;
+    border-radius: 50px;
+    width: 350px;
+    height: 60px;
+  }
+  
+  .log-btn {
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 30px;
+    background-color: #135a88;
+    color: #fff;
+    width: 200px;
+    padding: 0;
+    border-radius: 10px;
+  }
+  .forget-ps {
+    margin-top: 30px;
+    color: #135a88;
+    cursor: pointer;
+  }
+  .forget-ps p,
+  .new-account p {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .quick {
+    cursor: pointer;
+    color: #135a88;
+  }
+  
+  /* teacher wrote */
+  
+  div.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000vh;
+    background-color: hsla(0, 0%, 0%, 0.5);
+  
+    /* 預設：完全透明；設定 z-index: -1 會在整個頁面的後方，看不到，才不會擋到頁面元素。 */
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 1s;
+  }
+  div.overlay.-on {
+    /* 加上 -on 之後，Modal 漸漸出現，因為有設定 transition */
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  div.overlay.-opacity-zero {
+    /* 關閉 Modal 時，先讓 opacity設定0，就會慢慢變成完全透明，但這時會擋到後面的元素，所以要再移除 -on 及 -opacity-zero 這兩個 class */
+    opacity: 0;
+  }
+
+  
+
+/* 登入 / 註冊燈箱 end */
+
       
 
 /* ----開始！---- */
 
 .contact-btn{
     background-color: #f0e6a2;
-    width: 250px;
+    width: 300px;
     height: 70px;
+    text-align: center;
+    position: relative;
+
+    
+
 }
-.first-block i{
+.contact-btn i{
+    width: 200px;
+    /* border: teal 1px solid; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+
+
+    
+}
+
+.love-btn{
+    background-color: #fa8171;
+    width: 300px;
+    height: 70px;
+    text-align: center;
+
+    position: relative;
+    
+
+}
+
+.love-btn i{
+    /* border: teal 1px solid; */
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    
+}
+
+.fa-facebook-messenger,.fa-heart{
+    color: #135a88;
+}
+/* .first-block i{
     color: #264250;  
     transform: translateY(25%) translateX(25%);
-}
+}  */
 .first-block {
     /* border: rgb(218, 91, 17) 1px solid; */
     display: flex;
     justify-content: space-around;
-    width: 700px;
+    width: 1200px;
     height: 200px;
     /* position: relative; */
 
@@ -132,25 +316,16 @@ text-align: center;
 }
 
 
-.contact-btn p{
-    font-size: 30px;
-    position: absolute;
-    top: 55px;
-    left: 120px;
-    
-}
 
 .star-group{
     color: #FFD740;
     /* border: 1px solid darkcyan; */
-    position: absolute;
-    left: 666px;
-    bottom: -185px;
+   
 
 }
 .first-block{
     position: absolute;
-    left: 600px;
+    left: 500px;
 }
 
 .banner{
@@ -171,7 +346,18 @@ text-align: center;
 }
 .person-pic p{
     font-size: 50px;
+    position: absolute;
+    left: 100px;
+    top: 300px;
 }
+
+
+
+
+
+
+
+
 
 .money-card{
     background-color: #E5E5E5;
@@ -183,8 +369,8 @@ text-align: center;
     align-items: center;
 
     position: absolute;
-    left: 500px;
-    top: 280px;    
+    left: 570px;
+    top: 230px;    
 }
 .money-card > i {
     color: #5F5300;
@@ -213,14 +399,50 @@ text-align: center;
 }
 /* ---個人狗狗相簿--- */
 
+.person-pic-aldum{
+    /* border: #708090 1px solid; */
+    width: 600px;
 
+    font-size: 0;
+
+}
 .big-one{
     background-image: url(../img/photo-1494947665470-20322015e3a8.jpeg);
-    width: 400px;
+    width: 600px;
     height: 300px;
     background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;   
+    background-size: cover;
+    background-repeat: no-repeat; 
+    
+    border-radius: 20px ;
+    /* border: slategrey 1px solid; */
+
+    transition: all .3s;
+    cursor: pointer;
+
+}
+
+.big-2{
+    display: flex;
+    justify-content: space-evenly;
+
+    margin-top: 30px;
+    
+    
+}
+
+.little-aldum-1{
+    /* border: rgb(38, 109, 180) 1px solid; */
+    
+    display: inline-block;
+    
+    
+}
+.little-aldum-2{
+    /* border: rgb(38, 109, 180) 1px solid; */
+
+    display: inline-block;
+
 }
 
 
@@ -229,16 +451,33 @@ text-align: center;
     width: 200px;
     height: 200px;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+
+    margin-bottom: 20px;
+    border-radius: 20px ;
+    transition: all .3s;
+    cursor: pointer;
+
 }
+.big-one:hover , .aldum-pic-1:hover, .aldum-pic-2:hover, .aldum-pic-3:hover ,.aldum-pic-4:hover{
+    transform: scale(1.1);
+}
+
+
 .aldum-pic-2{
     background-image: url(../img/photo-1587300003388-59208cc962cb.jpeg);
     width: 200px;
     height: 200px;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+
+    border-radius: 20px ;
+    transition: all .3s;
+    cursor: pointer;
+
+
 
 }
 .aldum-pic-3{
@@ -248,41 +487,86 @@ text-align: center;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    margin-bottom: 20px;
+    border-radius: 20px ;
+    transition: all .3s;
+    cursor: pointer;
+
+
+
 }
 .aldum-pic-4{
     background-image: url(../img/photo-1507145569372-d69bae8bc9a0.jpeg);
     width: 200px;
     height: 200px;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+
+    border-radius: 20px ;
+    transition: all .3s;
+    cursor: pointer;
+    
+
 } 
+
+
 
 /* ----月曆---- */
 .big-calender{
-    width: 400px;
-    height: 380px;
+    /* border: 1px solid saddlebrown; */
+    width: 600px;
+    height: 580px;
     margin: 40px;
+    margin-top: 150px;
+    
+    font-family: tiny-jf;
 }
+.month{
+    
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+.month p{
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+
 .arrow{
-    padding: 3px 8px;
-    border: 1.6px solid #707070;
-    border-radius: 50%;
-    font-size: 0.43em;
+    color: #847C73;
     vertical-align: middle;
+
 }
 
 .prev{
      margin-right: 40px;
+     
 }
    
 .next{
     margin-left: 40px
 }
 
+.calender{
+    /* border: 1px solid saddlebrown; */
+    margin: 0px 70px;
+}
+
 td{
     padding: 1em 1em;
     cursor: default;
+    font-size: 20px;
+    text-align: center;
 }
     
    
@@ -292,6 +576,7 @@ td{
     text-transform: uppercase;
 }
 th {
+    font-size: 20px;
     padding-bottom: 5px;
 }
     
@@ -302,10 +587,12 @@ th {
 
 .today{
     color: white;
-    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
     background-color: salmon;
 }    
-    c
+    
 
 .reminder::before{
     content: '';
@@ -315,7 +602,7 @@ th {
     background-color: salmon;
     border-radius: 50%;
     margin-top: 24px;
-    margin-left: 5px;
+    margin-left: 9px;
 }
     
 .reminder:hover{
@@ -327,7 +614,7 @@ th {
 }
    
 .desciption{
-     background-color: salmon;
+    background-color: salmon;
     position: absolute;
 }
    
@@ -339,7 +626,7 @@ a:link{
     
 
 a:visited{
-     color: darkolivegreen;
+    color: darkolivegreen;
     text-decoration: none;
 }
    
@@ -359,48 +646,63 @@ a:active {
 /* ----日曆結束---- */
  
 
-    
-    
-
-
-
-
-
-
 /*---- 評論 ---- */
 .bio-2area{
     /* border: rgb(141, 39, 102) 1px solid; */
-    width: 1200px;
+    width: 1300px;
     margin: 0 auto;
 
-    position: relative;
+    position: relative;   
 }
 .comment-group{
+    
     position: absolute;
     right: 0;
     top: 0;
+}
+
+.comment-title{
+    font-size: 40px;
+    margin-top: 0;
 }
 .comment{
     /* border: steelblue 1px solid; */
     width: 600px;
     height: 280px;
-    margin: 15px;
+    margin: 30px;
+    padding: 20px;
+
+    -webkit-box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 6px 3px;
 }
+/* 
+.comment p:first-child{
+    color: violet;
+} */
+
 .comment-1,.comment-3{
     background-color: #f5ecec;
 }
 .comment-2,.comment-4{
     background-color: #f2ede1;
 }
-.bio-content{
-    border: darkorange 1px solid;
-   
+
+
+.bio-content p{
+    width: 600px;
+    /* text-align: center; */
+    font-size: 25px;
+    letter-spacing: 3px;
+    line-height: 40px;
+    background-color: #3c677c;
+    color: #fff;
+    padding: 30px 30px;
+
+    position: absolute;
+    right: 300px;
+    bottom: 6px;
     
 }
-.bio-content p{
-    width: 500px;
-    text-align: center;
-}
+
 
 .c-pic-1{
     background-image: url(../img/person-1.jpg);
@@ -441,6 +743,32 @@ a:active {
     background-repeat: no-repeat; 
 }
 
+/* 頁碼 */
+
+.comments-page-num{
+    margin: 0 auto;
+    width: 600px;
+    /* border: steelblue 1px solid; */
+    display: flex;
+    justify-content: center;
+    
+}
+.comments-page-num li{
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+
+.comments-page-num > li:first-child{
+    color: #fff;
+   
+    background-color: #fa8171;
+    border-radius: 50%;
+}
+
+
+
 /* ---上の按鈕 ＋ footer--- */
 .top{
     cursor: pointer;
@@ -470,5 +798,7 @@ a:active {
     width: 100%;
     background-color: #264250;
     color: #fff;
+
+    margin-top: 300px;
 
 }

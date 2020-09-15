@@ -1,0 +1,365 @@
+*{
+    box-sizing: border-box;
+    list-style: none;
+    /* border: 1px solid #7e6b41; */
+    text-decoration: none;
+
+}
+
+body{
+    background-color: #F2EDE1;
+    font-family: "oriya", "taipei-fonts";
+}
+
+@font-face{
+    font-family: "taipei-fonts";
+    src: url(../fonts/TaipeiSansTCBeta-Regular.ttf);
+    font-display: swap;
+}
+@font-face{
+    font-family: "oriya";
+    src: url(../fonts/Oriya\ MN.ttc);
+    font-display: swap;
+
+}
+
+@font-face{
+    font-family: "Ronde-B";
+    src: url(../fonts/Ronde-B_square.otf);
+    font-display: swap;
+}
+.main-bgc{
+
+width: 1920px;
+
+height: 1105px;
+}
+
+
+
+.logo img{
+    display: inline-block;
+    width: 100%;
+    /* height: 100px; */
+}
+.logo{
+    /* border: dimgray 1px solid; */
+    width: 150px;
+    height: 120px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+   padding-top: 20px;
+}
+
+
+
+
+/* 登入 / 註冊燈箱 */
+
+.fa-window-close{
+    position: absolute;
+    padding: 10px;
+    cursor: pointer;
+}
+.log-in-modal {
+    width: 1100px;
+    height: 600px;
+    /* border: 1px solid #333; */
+    /* margin: 0 auto; */
+  
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    position: relative;
+    /* top: 50%; */
+    /* left: 50%; */
+  transform: translate(39%, 35%);
+  }
+  .log-dog-pic {
+    width: 600px;
+    height: 600px;
+    border-radius: 20px 0 0 20px;
+
+    background-image: url(../img/log-in.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .main-log-part {
+    line-height: 2;
+    width: 750px;
+    /* border: #333 1px solid; */
+    position: absolute;
+    right: 0;
+    text-align: center;
+    padding: 15px;
+  }
+  .main-log-part input {
+    margin: 0 auto;
+    margin-top: 30px;
+    border: none;
+    display: block;
+    border-radius: 50px;
+    width: 350px;
+    height: 60px;
+  }
+  
+  .log-btn {
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 30px;
+    background-color: #135a88;
+    color: #fff;
+    width: 200px;
+    padding: 0;
+    border-radius: 10px;
+  }
+  .forget-ps {
+    margin-top: 30px;
+    color: #135a88;
+    cursor: pointer;
+  }
+  .forget-ps p,
+  .new-account p {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .quick {
+    cursor: pointer;
+    color: #135a88;
+  }
+  
+  /* teacher wrote */
+  
+  div.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1000vh;
+    background-color: hsla(0, 0%, 0%, 0.5);
+  
+    /* 預設：完全透明；設定 z-index: -1 會在整個頁面的後方，看不到，才不會擋到頁面元素。 */
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 1s;
+  }
+  div.overlay.-on {
+    /* 加上 -on 之後，Modal 漸漸出現，因為有設定 transition */
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  div.overlay.-opacity-zero {
+    /* 關閉 Modal 時，先讓 opacity設定0，就會慢慢變成完全透明，但這時會擋到後面的元素，所以要再移除 -on 及 -opacity-zero 這兩個 class */
+    opacity: 0;
+  }
+
+  
+
+/* 登入 / 註冊燈箱 end */
+
+.nav-3 li,.nav-4 li{
+list-style: none;
+display: inline-block;
+cursor: pointer;
+
+}
+.main-nav{
+z-index: 3;
+position: relative;
+}
+
+
+.nav-3 li{
+    padding: 20px;
+    
+}
+
+
+.nav-3{
+display: inline-block;
+
+width: 400px;
+height: 100px;
+margin: 30px;
+color: #264250;
+position: absolute;
+top: 0;
+right: 0;
+}
+
+
+
+.nav-4 {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.nav-4 li{
+
+margin: 0 70px;
+color: #264250;
+font-size: 25px;
+
+}
+
+
+.nav-4 ul{
+
+width: 60%;
+padding: 0;
+text-align: center;
+
+}
+
+
+.nav-4  li:hover::after{
+    /*hover要先寫*/
+    width: 100%;/*讓線段長出*/
+    
+}
+.nav-4  li::after{
+    content: "";/*讓after顯示出來*/
+    border-bottom: 40px solid #c0ba71;
+    
+    margin: auto;/*使線段從中間展開*/
+    position: relative/*調整位置*/;
+    width: 0%;
+    display: block;/*變成一個區塊才hover的到*/
+    transition: all .3s;
+    top: -25px;
+    z-index: -1;
+}
+.fa-question-circle{
+    color: #264250;
+}
+.brand-1 li{
+    color: #DB8F8B;
+}
+
+
+
+.main-happy{
+    
+        width: 1920px;
+        height: 1105px;
+        background-color: #F2EDE1;
+}
+.story-banner{
+    font-size: 0;
+    position: relative;
+}
+.banner-pic-group{
+    position: absolute;
+    left: 150px;
+}
+.mm-pic{
+    background-image: url(../img/HipstamaticPhoto-518420549.441192.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 700px;
+    
+    
+}
+.my-love{
+    background-image: url(../img/my-love.jpg);
+    background-size: cover;
+    background-position: -140px;
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 700px;
+       
+}
+.banner-words-1{
+    font-size: 90px;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    left: 800px;
+    top: 50px;
+    letter-spacing: 2px;
+    -webkit-filter:opacity(.5);
+
+
+    
+}
+.banner-words-2{
+    font-size: 90px;
+    font-weight: 600;
+    position: absolute;
+    top: 150px;
+    left: 1050px;
+    color: #264250;
+    letter-spacing: 2px;
+    -webkit-filter:opacity(.8);
+
+
+}
+.yellow-block{
+    width: 425px;
+    height: 700px;
+    background-color: #E9D098;
+    position: absolute;
+    left: 1350px;
+    -webkit-filter:opacity(.9);
+
+
+} 
+.story-banner div{
+    display: inline-block;
+    
+}
+
+.story-area{
+    width: 100%;
+}
+
+.story-content{
+    border: 1px solid darkslategrey;
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
+}
+.story-content p{
+    font-size: 25px;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
+
+.top{
+    cursor: pointer;
+    background-color: #EBF6FD;
+    color: #707070;
+    height: 100px;
+    width: 100px;
+    font-size: 30px;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    
+}
+
+.lighthouse-footer{
+    text-align: center;
+    margin-top: 200px;
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+    background-color: #264250;
+    color: #fff;
+
+}

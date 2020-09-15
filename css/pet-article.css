@@ -50,14 +50,14 @@ display: inline-block;
 
 }
 .main-nav{
-
+z-index: 3;
 position: relative;
 }
 
 .nav-3{
 display: inline-block;
 
-width: 200px;
+width: 400px;
 height: 100px;
 color: #264250;
 position: absolute;
@@ -65,9 +65,10 @@ top: 0;
 right: 0;
 }
 
-.nav-3 a{
-    color: #264250;
-    padding: 5px;
+.nav-3 li{
+    padding: 20px;
+    cursor: pointer;
+    
 }
 
 .nav-4{
@@ -76,21 +77,157 @@ right: 0;
     
 }
 
+
+.nav-4  li::after{
+    content: "";/*讓after顯示出來*/
+    border-bottom: 40px solid #DB8F8B;
+    margin: auto;/*使線段從中間展開*/
+    position: relative/*調整位置*/;
+    width: 0%;
+    display: block;/*變成一個區塊才hover的到*/
+    transition: all .3s;
+    top: -25px;
+    z-index: -1;
+}
+.nav-4  li:hover::after{
+    /*hover要先寫*/
+    width: 100%;/*讓線段長出*/
+}
+
 .nav-4 li{
-/* padding-left: 100px; */
+
 margin: 0 70px;
 color: #264250;
-font-size: 20px;
+font-size: 25px;
 
 }
 
 .nav-4 ul{
 /* border: 1px solid #19753c; */
-width: 900px;
-/* margin: 0 auto;  */
+width: 60%;
+
 padding: 0;
 text-align: center;   
 }
+.fa-question-circle{
+    color: #264250;
+}
+
+.pet-article-4 li{
+    color: #E9D098;
+}
+
+
+
+
+/* @import url("cart-test.css"); */
+
+/* 登入 / 註冊燈箱 */
+
+.fa-window-close{
+    position: absolute;
+    padding: 10px;
+    cursor: pointer;
+}
+.log-in-modal {
+    width: 1100px;
+    height: 600px;
+    /* border: 1px solid #333; */
+    /* margin: 0 auto; */
+  
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    position: relative;
+    /* top: 50%; */
+    /* left: 50%; */
+  transform: translate(39%, 35%);
+  }
+  .log-dog-pic {
+    width: 600px;
+    height: 600px;
+    border-radius: 20px 0 0 20px;
+
+    background-image: url(../img/log-in.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .main-log-part {
+    line-height: 2;
+    width: 750px;
+    /* border: #333 1px solid; */
+    position: absolute;
+    right: 0;
+    text-align: center;
+    padding: 15px;
+  }
+  .main-log-part input {
+    margin: 0 auto;
+    margin-top: 30px;
+    border: none;
+    display: block;
+    border-radius: 50px;
+    width: 350px;
+    height: 60px;
+  }
+  
+  .log-btn {
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 30px;
+    background-color: #135a88;
+    color: #fff;
+    width: 200px;
+    padding: 0;
+    border-radius: 10px;
+  }
+  .forget-ps {
+    margin-top: 30px;
+    color: #135a88;
+    cursor: pointer;
+  }
+  .forget-ps p,
+  .new-account p {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .quick {
+    cursor: pointer;
+    color: #135a88;
+  }
+  
+  /* teacher wrote */
+  
+  div.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000vh;
+    background-color: hsla(0, 0%, 0%, 0.5);
+  
+    /* 預設：完全透明；設定 z-index: -1 會在整個頁面的後方，看不到，才不會擋到頁面元素。 */
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 1s;
+  }
+  div.overlay.-on {
+    /* 加上 -on 之後，Modal 漸漸出現，因為有設定 transition */
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  div.overlay.-opacity-zero {
+    /* 關閉 Modal 時，先讓 opacity設定0，就會慢慢變成完全透明，但這時會擋到後面的元素，所以要再移除 -on 及 -opacity-zero 這兩個 class */
+    opacity: 0;
+  }
+
+  
+
+/* 登入 / 註冊燈箱 end */
+
+
 .main-happy{
     width: 100%;
     height: 1105px;
@@ -260,6 +397,8 @@ text-align: center;
 .cook-pic-2 img{
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    top: -35px;
 }
 
 
@@ -334,6 +473,7 @@ text-align: center;
     right: 200px;
     bottom: 30px;
     font-size: 25px;
+    line-height: 40px;
 }
 .cooking-area-1 > p > span{
     font-size: 50px;
@@ -350,9 +490,11 @@ text-align: center;
 .cooking-area-2 p{
     font-size: 25px;
     position: absolute;
-    left: 350px;
+    left: 600px;
     bottom: 20px;
     text-align: right;
+    line-height: 40px;
+
 }
 
 
